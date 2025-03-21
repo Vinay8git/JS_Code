@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        body{
+            background-color: #151313;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: #0d91d9;
+            margin: 0 auto;
+            color: #151313;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* font-size: 30px; */
+            animation: changeColor 5s infinite;
+            border-radius: 10px;
+            box-shadow: 0 0 7px rgb(117, 235, 237);
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+        setInterval(function(){
+            const time = new Date().toLocaleTimeString();
+            const tab = document.getElementById('time');
+            tab.innerHTML = time;
+
+        }, 1000);
+
+    </script>
+</body>
+</html>
